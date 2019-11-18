@@ -7,7 +7,6 @@ from ase.io import Trajectory
 
 def load_trajectory(filename):
     """load trajectory
-
     :param filename:
     :return list of ASE atom objects
     """
@@ -18,21 +17,22 @@ def atoms_to_array(atom_objects, n_train):
     """Take an ASE atom object and convert it into a matrix of size
     (n_atoms, 3) such that each row is as atom and the columns are the xyz
     coordinates
-
     :param atoms: Atoms objects defining atoms position in space
     :type atoms: ase.Atoms
-
     :return numpy array of dimension (n_atoms, 3)
     """
     putting_sequence = []
+    pos = []
 
     for i in range(n_train):
         atoms = atom_objects[i]
         xyz = atoms.get_positions() # get xyz coordinates
+        pos.append(xyz)
         dist = np.linalg.norm(xyz, axis=1) # compute distance to origin
         pos_sorted = xyz[dist.argsort()] # sort the atoms by their distances
         putting_sequence.append(pos_sorted)
-    return putting_sequence
+        
+    return pos, putting_sequence
 
 def gaussian_expansion(input_array, n_grid_points, sigma, n_train, n_type):
     """gaussian expansion
@@ -40,7 +40,6 @@ def gaussian_expansion(input_array, n_grid_points, sigma, n_train, n_type):
     of size n_grid is added.
     The extra dimension is a smoothed one-hot encoding of the scalar values
     of the last dimension.
-
     :param input_array:
     :return expanded_array
     """
@@ -79,7 +78,7 @@ if __name__ == '__main__':
     atom_objects = load_trajectory(filename)
 
     # Create matrix of size (n_atoms, 3) with the coordinates of each atom
-    putting_sequence = atoms_to_array(atom_objects, args.n_train)
+    pos, putting_sequence = atoms_to_array(atom_objects, args.n_train)
 
     # Make the gaussian expansion
     expanded_array = gaussian_expansion(putting_sequence, args.n_grid_points,
