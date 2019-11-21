@@ -23,7 +23,7 @@ atoms = load_trajectory(traj)
 snaps = len(atoms) # 175983
 
 # truncation of trajectory
-n_snaps = 250 # number of used snapshots 
+n_snaps = 8000 # number of used snapshots 
 trunc_traj = []
 for i in range(n_snaps):
     trunc_traj.append(atoms[i])
@@ -49,3 +49,5 @@ rdf = RDFobj.get_rdf()
 x = np.arange(bins) * rng / bins
 plt.plot(x, rdf)
 plt.show()
+
+view(trunc_traj[0])
