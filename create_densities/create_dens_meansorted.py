@@ -40,7 +40,7 @@ def mean_sorting(pos, n_train):
     by their mean position to the origin
 
     :param pos: (n_train, n_atoms, 3) array obtained from atoms_to_array
-
+    :param n_train: number of snapshots used for sorting
     :return numpy array of dimension (n_train, n_atoms, 3)
     """
 
