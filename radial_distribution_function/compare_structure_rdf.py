@@ -84,7 +84,7 @@ def rdf_org_traj(atoms, rng, bins, used_snaps):
     """
     # truncation of trajectory
     trunc_traj = []
-    for i in range(used_snaps):
+    for i in range(len(atoms)):
         trunc_traj.append(atoms[i])
 
     # Determine RDF
@@ -120,11 +120,25 @@ def comp_plot(struct_1, struct_2, struct_3, rng, bins):
     plt.plot(x, struct_1, label="Generated structure")
     plt.plot(x, struct_2, '--', label="Original structure")
     plt.plot(x, struct_3, label="Random structure")
-    plt.xlabel("Distances")
+    plt.xlabel("Distances [Å]")
     plt.ylabel("RDF")
     plt.legend()
+    plt.grid(True)
     plt.show()
     return None
+
+# Measure functions
+def rmse(gen_struct, org_struct):
+    """rmse
+    root mean square error function
+    """
+    return np.sqrt(((gen_struct - org_struct) ** 2).mean())
+
+def mse(gen_struct, org_struct):
+    """mse
+    mean square error function
+    """
+    return (np.square(gen_struct - org_struct)).mean()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -150,3 +164,4 @@ if __name__ == '__main__':
 
     # Compare RDF for structures
     comp_plot(gen_struct_rdf, org_struct_rdf, rand_struct_rdf, args.rng, args.bins)
+
