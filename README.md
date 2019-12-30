@@ -29,7 +29,9 @@ Optional arguments:
 
 ## Model performance (radial_distribution_function)
 As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r. 
-The RDF reconstruction error is ![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/rdf_error.png) and is used to guide model development.
+The RDF reconstruction error is 
+![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/rdf_error.png) 
+and is used to guide model development.
 
 ### Compare radial distribution functions
 The compare_structure_rdf.py script can be used to compare the obtained radial distibution functions from our generation. You run the following in the terminal
@@ -42,6 +44,7 @@ Optional arguments:
 - Resolution of the RDF ```bins```, default=100
 
 ### Example of comparison
+Here is a comparison of the radial distribution function of one of our generated structures and the original structure 
 ![Screenshot](radial_distribution_function/plots/compare_rdfs.png)
 
 
