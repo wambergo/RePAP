@@ -35,8 +35,9 @@ Optional arguments:
 - Types of atoms ```n_type```, default=1
 
 ## Model performance (radial_distribution_function)
-As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r. 
-The RDF reconstruction error is 
+As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r.
+
+We define the RDF reconstruction error as
 
 ![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/rdf_error.png) 
 
