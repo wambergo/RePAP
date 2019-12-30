@@ -1,5 +1,12 @@
 # Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
 
+## Prerequisites
+- Python 3.5+
+- NumPy 1.10+: ```pip3 install numpy```
+- SciPy 0.17+: ```pip3 install scipy```
+- PyTorch: refer to [PyTorch website](https://pytorch.org/get-started/locally/)
+- ASE: refer to [ASE website](https://wiki.fysik.dtu.dk/ase/install.html)
+
 ## Create densities
 The probabilistic axis projection framework consists of representing each atom (in each snapshot
 of the molecular training trajectory) as a discretized Gaussian density cloud that is projected onto
@@ -28,9 +35,29 @@ Optional arguments:
 - Types of atoms ```n_type```, default=1
 
 ## Model performance (radial_distribution_function)
-As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r.
+As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r. 
+The RDF reconstruction error is 
 
-## Colab
+![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/rdf_error.png) 
+
+and is used to guide model development.
+
+### Compare radial distribution functions
+The compare_structure_rdf.py script can be used to compare the obtained radial distibution functions from our generation. You run the following in the terminal
+```
+python3 compare_structure_rdf.py "/location_of_generated_structure_converted_to_numpy.npy" "/location_of_original_ASE_traj_file.traj"
+```
+Optional arguments:
+- Maximum distance up to which RDF is calcuated in Ångstrøm ```rng```, default=10
+- Kernel parameter for density smoothing ```sigma```, default=1
+- Resolution of the RDF ```bins```, default=100
+
+### Example of comparison
+Here is a comparison of the radial distribution function of one of our generated structures and the original structure 
+![Screenshot](radial_distribution_function/plots/compare_rdfs.png)
+
+
+## Google Colab
 
 ### Main setup
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa)
