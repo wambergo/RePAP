@@ -1,4 +1,4 @@
-# Atomic-structure-generation-with-recurrent-neural-networks
+# Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
 
 ## Create densities
 The probabilistic axis projection framework consists of representing each atom (in each snapshot
@@ -12,10 +12,28 @@ x0, y0, z0, x1, y1, z1, ..., x29, y29, z29. This is the sequential order fed to 
 With a 50-dimensional grid along each axis, the density of the i’th atom coordinate at the k’th
 element of the grid vector is
 
-![alt text](http://www.sciweavers.org/tex2img.php?eq=M_%7Bi%2Ck%7D%3D%5Cfrac%7B1%7D%7BC%7D%20%5Cexp%5Cleft%28-%5Cfrac%7B%28grid_k-r_i%29%5E2%7D%7B2%5Csigma%7D%20%5Cright%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
+![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/gauss_exp.png)
 
-## First setup
-https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa
+### Usage
+(applies to all create_densites_xxx.py files)
 
-## Second setup
-https://colab.research.google.com/drive/1lCU9xOw1He0ArtYbdtE179HwEsGbrsul
+In order to take an ASE atom object and make the gaussian expansion run the following in the terminal
+```
+python3 create_densities_xxx.py "/location_of_ASE_traj_file.traj"
+```
+Optional arguments:
+- The number of grid points ```n_grid_points```, default=50
+- Kernel parameter for density smoothing ```sigma```, default=1
+- Number of training examples ```n_train```, default=1
+- Types of atoms ```n_type```, default=1
+
+## Model performance (radial_distribution_function)
+As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r.
+
+## Colab
+
+### Main setup
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa)
+
+### Testing setup
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lCU9xOw1He0ArtYbdtE179HwEsGbrsul)
