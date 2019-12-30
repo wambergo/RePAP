@@ -1,4 +1,5 @@
 # Atomic-structure-generation-with-recurrent-neural-networks
+# Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
 
 ## Create densities
 The probabilistic axis projection framework consists of representing each atom (in each snapshot
@@ -14,8 +15,22 @@ element of the grid vector is
 
 ![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/gauss_exp.png)
 
-## First setup
+### Usage
+(applies to all create_densites_xxx.py files)
+
+In order to take an ASE atom object and make the gaussian expansion run the following in the terminal
+```
+python3 create_densities_xxx.py "/location_of_ASE_traj_file.traj"
+```
+Optional arguments:
+- The number of grid points ```n_grid_points```, default=50
+- Kernel parameter for density smoothing ```sigma```, default=1
+- Number of training examples ```n_train```, default=1
+- Types of atoms ```n_type```, default=1
+
+## Colab
+### First setup
 https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa
 
-## Second setup
+### Second setup
 https://colab.research.google.com/drive/1lCU9xOw1He0ArtYbdtE179HwEsGbrsul
