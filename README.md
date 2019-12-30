@@ -32,10 +32,8 @@ As a measure of the quality of the generated samples, we consider the radial dis
 
 ## Colab
 
-### First setup
+### Main setup
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa)
 
-https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa
-
-### Second setup
-https://colab.research.google.com/drive/1lCU9xOw1He0ArtYbdtE179HwEsGbrsul
+### Testing setup
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1lCU9xOw1He0ArtYbdtE179HwEsGbrsul)
