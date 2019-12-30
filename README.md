@@ -1,4 +1,3 @@
-# Atomic-structure-generation-with-recurrent-neural-networks
 # Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
 
 ## Create densities
@@ -28,8 +27,14 @@ Optional arguments:
 - Number of training examples ```n_train```, default=1
 - Types of atoms ```n_type```, default=1
 
+## Model performance (radial_distribution_function)
+As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r.
+
 ## Colab
+
 ### First setup
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa)
+
 https://colab.research.google.com/drive/1n1ZYoIAycpqcqS1h6HUPTPRlss9fMhUP#scrollTo=tCwAinf6qZDa
 
 ### Second setup
