@@ -35,7 +35,7 @@ Optional arguments:
 - Types of atoms ```n_type```, default=1
 
 ## Model performance (radial_distribution_function)
-As a measure of the quality of the generated samples, we consider the radial distribution function which measures the average number density of atoms at a distance r.
+As a measure of the quality of the generated samples, we consider the radial distribution function (RDF) which measures the average number density of atoms at a distance r.
 
 We define the RDF reconstruction error as
 
