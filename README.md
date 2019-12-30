@@ -1,5 +1,12 @@
 # Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
 
+## Prerequisites
+- Python 3.5+
+- NumPy 1.10+: ```pip3 install numpy```
+- SciPy 0.17+: ```pip3 install scipy```
+- PyTorch: refer to [PyTorch website](https://pytorch.org/get-started/locally/)
+- ASE: refer to [ASE website](https://wiki.fysik.dtu.dk/ase/install.html)
+
 ## Create densities
 The probabilistic axis projection framework consists of representing each atom (in each snapshot
 of the molecular training trajectory) as a discretized Gaussian density cloud that is projected onto
