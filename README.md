@@ -12,7 +12,6 @@ x0, y0, z0, x1, y1, z1, ..., x29, y29, z29. This is the sequential order fed to 
 With a 50-dimensional grid along each axis, the density of the i’th atom coordinate at the k’th
 element of the grid vector is
 
-<img src="https://render.githubusercontent.com/render/math?math= M_{i,k}=\frac{1}{C} \exp\left(-\frac{(grid_k-r_i)^2}{2\sigma} \right)">
 
 
 ## First setup
