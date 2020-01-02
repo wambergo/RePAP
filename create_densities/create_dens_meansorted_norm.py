@@ -140,7 +140,7 @@ if __name__ == '__main__':
                                         args.sigma, args.n_train, args.n_type)
 
     # Normalize rows in the density matrix
-    norm_density_matrix = norm_density_matrix(expanded_array)
+    norm_density_matrix = normalize_density(expanded_array)
 
     # Save normalized density matrix
     save_density_matrix(args.save_name, norm_density_matrix)
