@@ -1,4 +1,5 @@
-# RePAP <img src="https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/various%20figures/repap_logo.jpg" align="right" />
+# Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP) <img src="https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/various%20figures/repap_logo.jpg" align="right" />
+
 
 ## Prerequisites
 - Python 3.5+
