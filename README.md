@@ -50,7 +50,7 @@ python3 compare_structure_rdf.py "/location_of_generated_structure_converted_to_
 ```
 Optional arguments:
 - Maximum distance up to which RDF is calcuated in Ångstrøm ```rng```, default=10
-- Kernel parameter for density smoothing ```sigma```, default=1
+- Kernel parameter for density smoothing ```sigma```, default=0.1
 - Resolution of the RDF ```bins```, default=100
 
 ### Example of comparison
