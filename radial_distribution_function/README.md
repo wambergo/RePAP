@@ -1,4 +1,4 @@
-# RDF Plot examples <img src="https://github.com/wambergo/RePAP/blob/master/radial_distribution_function/rdf_figure.png" align="left" />
+# RDF Plot examples <img src="https://github.com/wambergo/RePAP/blob/master/radial_distribution_function/rdf_figure.png" align="right" />
 
 ## Unsorted with 8000 snapshots used, sigma = 0.25
 ![Screenshot](plots/compare_rdfs.png)
