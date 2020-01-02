@@ -10,7 +10,8 @@ RePAP provides a atom structure generation model using recurrent probabilistic a
 - PyTorch: refer to [PyTorch website](https://pytorch.org/get-started/locally/)
 - ASE: refer to [ASE website](https://wiki.fysik.dtu.dk/ase/install.html)
 
-## Create densities
+## Contents
+### Create densities
 The probabilistic axis projection framework consists of representing each atom (in each snapshot
 of the molecular training trajectory) as a discretized Gaussian density cloud that is projected onto
 each of the three axes x, y, and z.
@@ -24,7 +25,7 @@ element of the grid vector is
 
 ![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/gauss_exp.png)
 
-### Usage
+#### Usage
 (applies to all create_densites_xxx.py files)
 
 In order to take an ASE atom object and make the gaussian expansion run the following in the terminal
@@ -37,7 +38,7 @@ Optional arguments:
 - Number of training examples ```n_train```, default=1
 - Types of atoms ```n_type```, default=1
 
-## Model performance (radial_distribution_function)
+### Model performance (radial_distribution_function)
 As a measure of the quality of the generated samples, we consider the radial distribution function (RDF) which measures the average number density of atoms at a distance r.
 
 We define the RDF reconstruction error as
@@ -46,7 +47,7 @@ We define the RDF reconstruction error as
 
 and is used to guide model development.
 
-### Compare radial distribution functions
+#### Compare radial distribution functions
 The compare_structure_rdf.py script can be used to compare the obtained radial distibution functions from our generation. You run the following in the terminal
 ```
 python3 compare_structure_rdf.py "/location_of_generated_structure_converted_to_numpy.npy" "/location_of_original_ASE_traj_file.traj"
@@ -56,7 +57,6 @@ Optional arguments:
 - Kernel parameter for density smoothing ```sigma```, default=0.1
 - Resolution of the RDF ```bins```, default=100
 
-### Example of comparison
 Here is a comparison of the radial distribution function of one of our generated structures and the original structure 
 ![Screenshot](radial_distribution_function/plots/compare_rdfs.png)
 
