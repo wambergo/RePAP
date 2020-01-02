@@ -30,7 +30,7 @@ python3 create_densities_xxx.py "/location_of_ASE_traj_file.traj"
 ```
 Optional arguments:
 - The number of grid points ```n_grid_points```, default=50
-- Kernel parameter for density smoothing ```sigma```, default=1
+- Kernel parameter for density smoothing ```sigma```, default=0.1
 - Number of training examples ```n_train```, default=1
 - Types of atoms ```n_type```, default=1
 
