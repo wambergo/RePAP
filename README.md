@@ -58,7 +58,7 @@ Optional arguments:
 - Resolution of the RDF ```bins```, default=100
 
 Here is a comparison of the radial distribution function of one of our generated structures and the original structure 
-![Screenshot](radial_distribution_function/plots/compare_rdfs.png)
+![Screenshot](radial_distribution_function/plotscompare_s01_40000_l1_256hidden.png)
 
 
 ## Google Colab
