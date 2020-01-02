@@ -2,7 +2,7 @@
   width="128"
   height="128"
   style="float:left;">
-    # Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
+# Conditional generation of atomic structures using Recurrent Probabilistic Axis Projections (RePAP)
 
 ## Prerequisites
 - Python 3.5+
