@@ -118,7 +118,7 @@ if __name__ == '__main__':
     parser.add_argument('trajectories', help='Location of trajectory file')
     parser.add_argument('--n_grid_points', help='Number of grid points', type=int, default=50)
     parser.add_argument('--sigma', help='Kernel parameter for density smoothing [1 Å]',
-                        type=int, default=1)
+                        type=int, default=0.1)
     parser.add_argument('--n_train', help='Number of training examples', type=int, default=1)
     parser.add_argument('--n_type', help='Types of atoms', type=int, default=1)
     parser.add_argument('save_name', help='Name of the saved density matrix file')
