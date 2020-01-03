@@ -128,17 +128,17 @@ def comp_plot(struct_1, struct_2, struct_3, rng, bins):
     return None
 
 # Measure functions
-def rmse(gen_struct, org_struct):
+def rmse(gen_struct_rdf, org_struct_rdf):
     """rmse
-    root mean square error function
+    root mean square error function for RDF
     """
-    return np.sqrt(((gen_struct - org_struct) ** 2).mean())
+    return np.sqrt(((gen_struct_rdf - org_struct_rdf) ** 2).mean())
 
-def mse(gen_struct, org_struct):
+def mse(gen_struct_rdf, org_struct_rdf):
     """mse
-    mean square error function
+    mean square error function for RDF
     """
-    return (np.square(gen_struct - org_struct)).mean()
+    return (np.square(gen_struct_rdf - org_struct_rdf)).mean()
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -164,4 +164,8 @@ if __name__ == '__main__':
 
     # Compare RDF for structures
     comp_plot(gen_struct_rdf, org_struct_rdf, rand_struct_rdf, args.rng, args.bins)
+    error_rdf = mse(gen_struct_rdf, org_struct_rdf)
+    print("RDF reconstruction error:", error_rdf)
+    
+    
 
