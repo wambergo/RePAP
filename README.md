@@ -57,7 +57,7 @@ Optional arguments:
 - Kernel parameter for density smoothing ```sigma```, default=0.1
 - Resolution of the RDF ```bins```, default=100
 
-Here is a comparison of the radial distribution function of one of our generated structures and the original structure 
+Here is a comparison of the radial distribution function of one of our generated (silicon) structures and the original (silicon) structure 
 ![Screenshot](/radial_distribution_function/plots/compare_s01_40000_l1_256hidden.png)
 
 
