@@ -4,11 +4,17 @@
 - Evaluate radial distribution function for generated structure: rdf_for_new_structures.py
 - Compare structures with: compare_structure_rdf.py
 
-## RePAP Vanilla with 40000 snapshots used, sigma = 0.10 and layers with 256 units. Dim = 50
+## RePAP Vanilla, sigma = 0.10 and layers with 256 units. Dim = 50
 RDF reconstruction error: 351.32
 
 ![Screenshot](plots/compare_vanilla.png)
 
-## RePAP+ Atom # with 40000 snapshots used, sigma = 0.10 and layers with 256 units. Dim = 139
+## RePAP+ Axis, sigma = 0.10 and layers with 256 units. Dim = 139
+
+![Screenshot](plots/compare_vanilla_axis.png)
+
+
+## RePAP+ Atom #, sigma = 0.10 and layers with 256 units. Dim = 139
 RDF reconstruction error: 0.12050458005585839
+
 ![Screenshot](plots/compare_s01_40000_l1_256hidden.png)
