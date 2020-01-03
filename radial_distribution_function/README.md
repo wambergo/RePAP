@@ -8,4 +8,5 @@
 ![Screenshot](plots/compare_rdfs.png)
 
 ## Unsorted with 40000 snapshots used, sigma = 0.10 and layers with 256 units
+RDF reconstruction error: 0.12050458005585839
 ![Screenshot](plots/compare_s01_40000_l1_256hidden.png)
