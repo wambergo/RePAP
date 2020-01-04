@@ -11,6 +11,8 @@ RePAP provides a atom structure generation model using recurrent probabilistic a
 - ASE: refer to [ASE website](https://wiki.fysik.dtu.dk/ase/install.html)
 
 ## Contents
+RePAP_notebook.py contain the RePAP model.
+
 ### Create densities
 The probabilistic axis projection framework consists of representing each atom (in each snapshot
 of the molecular training trajectory) as a discretized Gaussian density cloud that is projected onto
