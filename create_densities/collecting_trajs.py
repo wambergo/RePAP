@@ -45,3 +45,11 @@ for i in range(len(trajs)):
     
     pos.append(atoms_to_array(atom_objects, n_train))
 
+# array formating 
+ny_pos=[]
+
+for i in range(len(pos)):
+    ny_pos.append(pos[i][0])
+
+
+np.save('ny_indep_trajs.npy', np.asarray(ny_pos))
