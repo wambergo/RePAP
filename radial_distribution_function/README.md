@@ -2,6 +2,7 @@
 
 - Evaluate radial distribution function for original structure (.traj files): rdf_for_org_structure.py
 - Evaluate radial distribution function for generated structure: rdf_for_new_structures.py
+- Evaluate radial distribution function for independent sequence: rdf_for_indep_seq.py
 - Compare structures with: compare_structure_rdf.py
 
 ## RePAP Vanilla, sigma = 0.10 and layers with 256 units. Dim = 50
