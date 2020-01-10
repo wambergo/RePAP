@@ -14,7 +14,7 @@ RePAP provides a atom structure generation model using recurrent probabilistic a
 RePAP_notebook.py contain the RePAP model.
 
 Model overview:
-![alt text](https://github.com/wambergo/Atomic-structure-generation-with-recurrent-neural-networks/blob/master/other/math/boltz.png)
+![alt text](https://github.com/wambergo/RePAP/blob/master/other/boltz.png)
 
 
 ### Create densities
